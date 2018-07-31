@@ -3,11 +3,14 @@
     <button (click)="searchWeather(searchCity)">Search</button>
     <p class="output-message">{{outPutErrorMessage}}</p>
 </div>
-
-<div class="convert-container">
-    <button class="convert-btn" (click)="convertSymbol()">{{celsiusSymbol}}/{{fahrenheitSymbol}}</button>
+<div class="date-group">
+        <div class="today-date">{{todayDate | date: 'EEE, dd MMM y'}}</div>
+        <div class="convert-container">
+                <button class="convert-btn" (click)="convertSymbol()">{{celsiusSymbol}}/{{fahrenheitSymbol}}</button>
+        </div>
 </div>
-<div class="today-date">{{todayDate | date: 'EEE, dd MMM y'}}</div>
+
+
 <h2 class="title-city">{{city|titlecase}}</h2>
 <div class="info-container">
 <ul class="city-list" >
