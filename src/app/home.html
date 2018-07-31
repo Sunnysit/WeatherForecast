@@ -1,0 +1,25 @@
+<div class="search-group">
+    <input class="searchbar" type="text" [(ngModel)]="searchCity" (click)="resetCityArray()" placeholder="Search city">
+    <button (click)="searchWeather(searchCity)">Search</button>
+    <p class="output-message">{{outPutErrorMessage}}</p>
+</div>
+
+<div class="convert-container">
+    <button class="convert-btn" (click)="convertSymbol()">{{celsiusSymbol}}/{{fahrenheitSymbol}}</button>
+</div>
+<div class="today-date">{{todayDate | date: 'EEE, dd MMM y'}}</div>
+<h2 class="title-city">{{city|titlecase}}</h2>
+<div class="info-container">
+<ul class="city-list" >
+    <li class="city-info" *ngFor="let forecast of forecastArray;let i =index;">
+        <ul class="info-list">
+            <li class="info-item">{{cityArray[i]|titlecase}}</li>
+            <li class="info-item">{{forecast.temp | number:'1.0-0'}}{{selectSymbol}}</li>
+            <li class="info-item"><img src='https://s.yimg.com/zz/combo?a/i/us/we/52/{{forecast.code}}.gif'></li>
+            <li class="info-item"><a routerLink="/detail/{{cityArray[i]}}" routerLinkActive="active">10-Day Forecast</a></li>
+
+        </ul>
+    </li>
+</ul>
+
+</div>

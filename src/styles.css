@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    height: 100vh;
+    color: white;
+    /* background-image: url('./assets/images/couldbg.jpg'); */
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+ul,li{
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,a:visited,a:active{
+    color: white;
+}
+
+button{
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    transition: all 1s ease;
+}
+
+button:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.searchbar{
+    border: none;
+    margin: 0 5px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    font-size: 16px;
+    color: #fff;
+}

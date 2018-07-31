@@ -1,0 +1,27 @@
+<div class="convert-container">
+        <button class="convert-btn" (click)="convertSymbol()">{{celsiusSymbol}}/{{fahrenheitSymbol}}</button>
+</div>
+<h2 class="title-city">{{city|titlecase}}</h2>
+<div class="info-container">
+        <ul class="city-list" >
+                <li class="city-info">
+                        <ul class="info-list">
+                                <li class="info-item"><span>Day</span></li>
+                                <li class="info-item"></li>
+                                <li class="info-item"></li>
+                                <li class="info-item"><span>Low</span></li>
+                                <li class="info-item"><span>High</span></li>
+                        </ul>
+                </li>
+                <li class="city-info" *ngFor="let forecast of forecastArray">
+                    <ul class="info-list">
+                        <li class="info-item">{{forecast.day}}, {{forecast.date}}</li>
+                        <li class="info-item">{{forecast.text}}</li>
+                        <li class="info-item">  <img src='https://s.yimg.com/zz/combo?a/i/us/we/52/{{forecast.code}}.gif'></li>
+                        <li class="info-item">{{forecast.low | number:'1.0-0'}}{{selectSymbol}}</li>
+                        <li class="info-item">{{forecast.high | number:'1.0-0'}}{{selectSymbol}}</li>
+                    </ul>
+                </li>
+            </ul>
+
+</div>
